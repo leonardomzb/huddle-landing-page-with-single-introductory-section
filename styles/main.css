@@ -1,0 +1,191 @@
+:root{
+  --clr-pr-500: hsl(257, 40%, 49%);
+  --clr-pr-400: hsl(300, 69%, 71%);
+  --clr-white: white;
+
+  --ff-headings: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+
+  --fs-base: 1rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+body{
+  background-image: url(../images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--clr-pr-500);
+  font-family: var(--ff-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-400);
+  color: var(--clr-white);
+}
+
+header{
+  padding-inline: 4rem;
+  padding-block: 3rem 4rem;
+}
+
+main{  
+  max-width: 1440px;
+  margin: auto;
+  padding-top: 2rem;
+  padding-inline: 4rem;
+}
+
+.logo{
+  width: 12.5rem;
+}
+.container{
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.information-div{  
+  padding: 3rem;
+}
+
+.information-div span{
+  display: block;
+}
+
+h1{
+  font-family: var(--ff-headings);
+  font-size: 2.25rem;
+  font-weight: var(--fw-600);
+  line-height: 1.2;
+  padding-bottom: 2rem;
+}
+
+.information-div p{
+  padding-bottom: 1.5rem;
+}
+
+.button{
+  padding: 0.688rem 3.688rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-pr-500);
+  font-weight: var(--fw-600);
+}
+
+.button:hover,
+.button:focus{
+  color: var(--clr-white);
+  background-color: var(--clr-pr-400);  
+}
+
+.button:focus{
+  outline: none;  
+}
+
+.rrss{
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  display: flex;
+  gap: 1rem;
+}
+
+.rrss i{
+  color: var(--clr-white);
+}
+
+.rrss a {
+  border: 1px solid var(--clr-white);
+  padding: .5rem .75rem;
+  border-radius: 50%;
+}
+
+.rrss a:hover{
+  border-color: var(--clr-pr-400);
+}
+
+.rrss a:focus {
+  outline: none;
+  border-color: var(--clr-pr-400);
+}
+
+.rrss a:hover i,
+.rrss a:focus i {
+  color: var(--clr-pr-400);
+}
+
+@media (max-width: 1345px) {
+  .information-div{  
+    padding: 3rem 0 3rem 2rem;
+  }
+  
+}
+
+@media (max-width: 1205px) {
+  header{
+    padding-inline: 2rem;
+  }
+  
+  main{  
+    padding-inline: 2rem;
+  }
+}
+
+
+@media (max-width: 1020px) {
+  header{
+    padding-inline: 2rem;
+    padding-block: 3rem;
+  }
+  
+  main{  
+    padding-inline: 2rem;
+    padding-top: unset;
+  }
+
+  .logo{
+    width: 10rem;
+  }
+
+  .ilustration-div{
+    width: 70%;
+  }
+
+  .information-div{  
+    padding: 3rem 0 0 0;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+  }
+
+  .rrss{
+    position: unset;
+    display: block;
+    margin-top: 3rem;    
+  }
+
+  .rrss a{
+    padding: 0.188rem 0.375rem;
+  }
+
+  h1{
+   
+    font-size: 1.75rem;
+    
+  }
+}
+
+@media (max-width: 425px) {
+  body{
+    background-image: url(../images/bg-mobile.svg);
+    background-size: contain;
+  }
+
+  .ilustration-div{
+    width: 100%;
+  }
+}
